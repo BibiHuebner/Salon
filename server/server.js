@@ -43,4 +43,3 @@ app.listen(port, () => {
   console.log("Server is running on " + port + "port");
 });
 // in package.json: type: module (import express)
-app.use("/books", require("./routes/books"));
