@@ -4,6 +4,7 @@ import cors from "cors";
 import booksRoute from "./routes/books.js";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import usersRoute from "./routes/users.js";
 
 // outdated: const bodyParser = require('body-parser');
 //const cors = require("cors");
@@ -38,7 +39,7 @@ app.use(cors());
 
 //Router
 app.use("/api/books", booksRoute);
-
+app.use("/api/users", usersRoute);
 app.listen(port, () => {
   console.log("Server is running on " + port + "port");
 });
